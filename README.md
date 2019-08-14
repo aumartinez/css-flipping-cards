@@ -1,4 +1,4 @@
-# css-flipping-cards
+# CSS FLIPPING CARDS
 
 CSS only animated flipping card
 
