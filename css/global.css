@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+}
+    
+h1 {	
+  text-align: center;
+}
+    
+#main {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  padding: 30px 0;
+}
+
+/* Flipping card */
+
+a.flip-card {
+  display: block;
+  background-color: transparent;
+  height: 360px;
+  width: 100%;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform: 0.6s;
+  transition: -webkit-transform 0.6s;
+  -o-transition: transform 0.6s;
+  transition: transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+a.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-card-back,
+.flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+a.flip-card:hover .flip-card-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 0;
+}
+
+a.flip-card:hover .flip-card-back {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  z-index: 1;
+}
+
+.flip-card-front {
+  background-color: #0E548B;
+  z-index: 1;
+  -webkit-transition: z-index 0s;
+  -o-transition: z-index 0s;
+  transition: z-index 0s;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flip-card-back {
+  background-color: #1D7AA9;
+  padding: 25px 10px;
+  box-sizing: border-box;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 0;
+  -webkit-transition: z-index 0s;
+  -o-transition: z-index 0s;
+  transition: z-index 0s;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flip-card-front p {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.flip-card-back p {
+  color: #fff;    
+}
+
+.flip-card-back p:first-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .col-2 {
+        float: left;
+        width: 50%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+}
