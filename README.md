@@ -15,3 +15,5 @@ is not supported, preventing to nest 3D transformed elements.
 ## The workaround
 
 The solution is to "mimic" the transition by transpointing the elements using z-index positionning.
+
+A working example is available to review at: https://accedo-gps.000webhostapp.com/demo/css-flipping-cards/index.html
