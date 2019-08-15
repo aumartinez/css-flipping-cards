@@ -50,7 +50,6 @@ a.flip-card {
   transition: transform 0.6s;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  overflow: hidden;
 }
 
 a.flip-card:focus .flip-card-inner,
