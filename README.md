@@ -14,6 +14,6 @@ is not supported, preventing to nest 3D transformed elements.
 
 ## The workaround
 
-The solution is to "mimic" the transition by transpointing the elements using z-index positionning. An empty <a> tag was also added to support the "click/tap" behavior on mobile devices.
+The solution is to "mimic" the transition by transpointing the elements using z-index positionning. An empty 	&lt;a&gt; tag was also added to support the "click/tap" behavior on mobile devices.
 
 A working example is available to review at: https://accedo-gps.000webhostapp.com/demo/css-flipping-cards/index.html
