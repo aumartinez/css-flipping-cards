@@ -44,6 +44,7 @@ a.flip-card {
   width: 100%;
   height: 100%;
   text-align: center;
+  z-index: 0;
   -webkit-transition: -webkit-transform: 0.6s;
   transition: -webkit-transform 0.6s;
   -o-transition: transform 0.6s;
@@ -65,12 +66,18 @@ a.flip-card:hover .flip-card-inner {
   width: 100%;
   height: 360px;
   display: table;  
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+    -webkit-transition: z-index 0s;
+  -o-transition: z-index 0s;
+  transition: z-index 0s;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 a.flip-card:focus .flip-card-front,
 a.flip-card:hover .flip-card-front {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   z-index: 0;
 }
 
@@ -84,12 +91,6 @@ a.flip-card:hover .flip-card-back {
 .flip-card-front {
   background-color: #0E548B;
   z-index: 1;
-  -webkit-transition: z-index 0s;
-  -o-transition: z-index 0s;
-  transition: z-index 0s;
-  -webkit-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s;
 }
 
 .flip-card-back {
@@ -99,12 +100,6 @@ a.flip-card:hover .flip-card-back {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   z-index: 0;
-  -webkit-transition: z-index 0s;
-  -o-transition: z-index 0s;
-  transition: z-index 0s;
-  -webkit-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s;
 }
 
 .flip-card-front p {
